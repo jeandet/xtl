@@ -32,6 +32,13 @@ install_headers([
 )
 
 
+pkgc = import('pkgconfig')
+pkgc.generate(name: 'xtl',
+    version: meson.project_version(),
+    description: 'The x template library '
+)
+
+
 tests_sources = [
  'test/test_xbase64.cpp',
  'test/test_xbasic_fixed_string.cpp',
